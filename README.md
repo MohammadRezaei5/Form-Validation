@@ -4,8 +4,8 @@ Practiced DOM manipulation with form validation, user input display, and UI feed
 
 Some features:
 
-css --> transition/flexbox/::before/logic-positions/
-js --> addEventListener/foreach-loop/queryselector/classlist/if-else/setTimeout
+* css --> transition/flexbox/::before/logic-positions/
+* js --> addEventListener/foreach-loop/queryselector/classlist/if-else/setTimeout
 
 --------------------------------------------------------------
 
