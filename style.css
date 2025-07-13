@@ -240,7 +240,7 @@ optgroup {
       .form-wrapper {
         .input-wrapper {
           display: flex;
-          padding: 0 !important;
+          padding: 0 10px 0 0 !important;
         }
       }
     }
