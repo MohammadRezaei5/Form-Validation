@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Vazirmatn", sans-serif;
+  font-feature-settings: "ss01";
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: #fff;
+}
+input,
+label,
+select,
+textarea,
+button,
+fieldset,
+legend,
+datalist,
+output,
+option,
+optgroup {
+  font: inherit;
+}
+
+.container {
+  width: 539px;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .user-get-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .form-wrapper {
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 5px;
+
+        label {
+          display: flex;
+          flex-direction: column;
+
+          .input-title {
+            margin-block-end: 5px;
+          }
+          .input-wrapper {
+            background-color: #fff;
+
+            border: 2px solid #e7e7e8;
+
+            border-radius: 8px;
+
+            padding: 10px 5px 10px 0;
+
+            input {
+              outline: 0;
+              border: none;
+            }
+
+            span {
+              color: #6d6d74;
+
+              background-color: #f2f2f3;
+
+              padding: 10px 5px;
+
+              border-radius: 8px 0 0 8px;
+            }
+          }
+          .error-message {
+            color: red;
+            font-size: 0.8em;
+            height: 1.2em;
+          }
+        }
+        .button-wrapper {
+          width: 100%;
+
+          margin-block-start: 10px;
+
+          button {
+            width: 100%;
+
+            border: 2px solid #b19276;
+
+            color: #b19276;
+
+            outline: 0;
+
+            background-color: transparent;
+
+            padding: 6px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            border-radius: 8px;
+
+            transition: background-color 0.3s ease, color 0.3s ease,
+              opacity 0.3s ease;
+
+            &:hover,
+            &:focus {
+              background-color: #b19276;
+              color: #fff;
+            }
+            &:disabled {
+              color: #fff;
+              border-color: transparent;
+              background-color: #b19276;
+              cursor: not-allowed;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+    .blur-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 5;
+      pointer-events: auto;
+    }
+
+    .locked-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(30deg);
+      font-size: 4em;
+      font-weight: bold;
+      color: red;
+      z-index: 10;
+      white-space: nowrap;
+    }
+  }
+
+  .user-result-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    color: #6d6d74;
+
+    background-color: hsl(0, 0%, 97%);
+    padding: 18px 16px;
+    border-radius: 8px;
+
+    .show-result {
+      display: flex;
+      gap: 5px;
+
+      margin-inline-end: 6px;
+
+      .input-title-show {
+        color: #54555d;
+
+        font-size: 15px;
+      }
+      .input-show {
+        color: #23242e;
+
+        font-size: 15px;
+      }
+
+      .divider {
+        color: #ceced1;
+      }
+    }
+  }
+
+  /* reload-btn */
+  .reload-wrapper {
+    display: none;
+
+    justify-content: center;
+
+    button {
+      outline: 0;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      padding: 5px 5px;
+
+      border-radius: 12px;
+      background-color: #fff;
+      border: 3px dashed #00b7eb;
+
+      font-family: inherit;
+      font-size: 15px;
+
+      transition: 0.5s background-color ease;
+
+      color: hsl(216, 18%, 34%);
+    }
+    button:hover {
+      background-color: hsl(210deg 9% 91% / 60%);
+    }
+    .reload-wrapper svg path {
+      fill: hsl(216, 18%, 34%);
+    }
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+  h1 {
+    margin-block-start: 20px;
+    padding: 10px;
+  }
+  .container {
+    width: 264px;
+
+    .user-result-wrapper {
+      margin-block-end: 20px;
+    }
+    .reload-wrapper {
+      margin-block-end: 20px;
+    }
+  }
+}
