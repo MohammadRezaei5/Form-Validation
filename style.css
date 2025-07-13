@@ -236,6 +236,14 @@ optgroup {
   }
   .container {
     width: 264px;
+    .user-get-wrapper {
+      .form-wrapper {
+        .input-wrapper {
+          display: flex;
+          padding: 0 !important;
+        }
+      }
+    }
 
     .user-result-wrapper {
       margin-block-end: 20px;
